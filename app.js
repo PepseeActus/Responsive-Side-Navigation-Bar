@@ -20,3 +20,9 @@ function menuBtnChange() {
         closeBtn.classList.replace("fa-times","fa-bars"); //replacing the iocns class
     }
 }
+
+window.addEventListener('click', function(e){   
+    if (!sidebar.contains(e.target) && sidebar.classList.contains("open")) {
+        sidebar.classList.toggle("open");
+    }
+});
